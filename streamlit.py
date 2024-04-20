@@ -12,6 +12,14 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
     st.title("Algot Raiders fonder")
+    st.markdown(
+    """
+    This tool collects monthly data from Avanza's most popular funds based on number of owners and runs a 
+    correlation + momentum algorithm to find the fund predicted to yield the highest return on investment for the next month.
+
+    Historical performance is based on re-balancing at the end of each month. 
+    """
+    )
 
     # Define the initial investment and the orderbook IDs
     initial_investment = 50000
