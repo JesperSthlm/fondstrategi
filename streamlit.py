@@ -11,14 +11,14 @@ from roi import roi
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
-    st.title("Algot's fondmaskin")
+    st.title("Algot Raiders fonder")
 
     # Define the initial investment and the orderbook IDs
     initial_investment = 50000
     orderbook_ids = [325406,1887,1933,512559,788394,377804,2111,788393,363,693994,2801,852914,736,94867,350,1959,1996,302887,589935,114006,2016,788397,2128,2026,708773,953015,96927,375216, 70789,1089362,132510,2007,728,464,471796,1509086,1877,1158131,715,155953,648075,510,157699,281,367456,404075,574]
     
     # Fetch and process data on button click
-    if st.button('Analyze Funds'):
+    if st.button('Run algorithm'):
         # Initialize an empty DataFrame to store all data points
         all_data_points = pd.DataFrame()
 

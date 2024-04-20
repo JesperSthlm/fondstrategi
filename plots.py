@@ -8,12 +8,7 @@ def plots(calculation):
     plt.figure(figsize=(15, 8))
 
     # Plotting multiple lines with markers and different colors
-    sns.lineplot(data=calculation, y='cumulative_growth_SMA_1', x=calculation.index, label='Strategy 1', marker='o')
-    sns.lineplot(data=calculation, y='cumulative_growth_SMA_2', x=calculation.index, label='Strategy 2', marker='o')
-    sns.lineplot(data=calculation, y='cumulative_growth_SMA_3', x=calculation.index, label='Strategy 3', marker='o')
-    sns.lineplot(data=calculation, y='cumulative_growth_SMA_4', x=calculation.index, label='Strategy 4', marker='o')
-    sns.lineplot(data=calculation, y='cumulative_growth_SMA_5', x=calculation.index, label='Strategy 5', marker='o')
-    sns.lineplot(data=calculation, y='cumulative_growth_SMA_6', x=calculation.index, label='Strategy 6', marker='o')
+    sns.lineplot(data=calculation, y='cumulative_growth_SMA_6', x=calculation.index, label='Strategy', marker='o')
 
     # Adding a title and labels
     plt.title("Strategy Cumulative Growth | Starting point at 50 000 SEK")
