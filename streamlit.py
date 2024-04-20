@@ -55,6 +55,10 @@ def main():
         performer_df = performer_df.rename(columns={0:'Prediction month'})
         st.table(performer_df)
 
+        # Display the image below the table
+        image_url = 'https://i.imgur.com/WvhYQHu.png'
+        st.image(image_url, caption='Fund ID location', use_column_width=True)
+
 # Ensure the file is run directly and not imported
 if __name__ == "__main__":
     main()
