@@ -45,6 +45,14 @@ def main():
 
         # Show best performers table
         performer_df = pd.DataFrame(performer).sort_values(by=0).tail(6).rename(columns={1: 'Fond ID to purchase'})
+        # Convert the '0' column to datetime
+        performer_df[0] = pd.to_datetime(performer_df[0])
+
+        # Format the date to year-month and add one month
+        performer_df[0] = performer_df[0] + pd.DateOffset(months=1)
+        performer_df[0] = performer_df[0].dt.strftime('%Y-%m')
+
+        performer_df = performer_df.rename(columns={0:'Prediction month'})
         st.table(performer_df)
 
 # Ensure the file is run directly and not imported
