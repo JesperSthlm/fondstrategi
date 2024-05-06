@@ -12,7 +12,7 @@ def fond_data(all_data_points, orderbook_ids):
             "navigator": False,
             "percentage": False,
             "start": "2018-01-01",
-            "end": "2024-04-30",
+            "end": "2025-04-30",
             "chartType": "AREA",
             "owners": False,
             "volume": False,
