@@ -98,7 +98,7 @@ def main():
         st.pyplot(fig)
 
         # Show best performers table
-        performer_df = pd.DataFrame(performer).sort_values(by=0).tail(6).rename(columns={1: 'Fond ID to purchase'})
+        performer_df = pd.DataFrame(performer).sort_values(by=0).tail(6).rename(columns={1: 'Fund ID to purchase'})
         # Convert the '0' column to datetime
         performer_df[0] = pd.to_datetime(performer_df[0])
 
@@ -108,8 +108,8 @@ def main():
 
         performer_df = performer_df.rename(columns={0:'Prediction month'})
 
-        performer_df['Fond Name'] = performer_df['Fond ID to purchase'].map(fond_dict)
-        
+        performer_df['Name of fund'] = performer_df['Fund ID to purchase'].map(fond_dict)
+
         st.table(performer_df)
 
         # Display the image below the table
